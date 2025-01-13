@@ -1,0 +1,14 @@
+.ReduxToolkit {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+}
+.ReduxToolkit-content {
+  width: 80%;
+  margin: 0 auto;
+}
+.demo {
+  font-family: "Fira Code", monospace;
+  text-align: left;
+}
