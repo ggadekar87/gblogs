@@ -7,9 +7,7 @@ export const ReduxToolkit = () => {
     return <div className='ReduxToolkit'>
         <div className='ReduxToolkit-content'>
             <h1>Install Redux Toolkit and React-Redux</h1>
-            <p>Add the Redux Toolkit and React-Redux packages to your project:
-
-            </p>
+            <p>Add the <a href='https://www.npmjs.com/package/@reduxjs/toolkit' rel="noreferrer" target="_blank"> Redux Toolkit</a> and <a href='https://www.npmjs.com/package/react-redux' rel="noreferrer" target="_blank"> React-Redux </a> packages to your project:</p>
             <Codeblockcontainer >
                 npm install @reduxjs/toolkit react-redux
             </Codeblockcontainer>
@@ -27,8 +25,8 @@ export const ReduxToolkit = () => {
                     language="javascript"
                 ></CodeComponent>
             </div>
-            <p>This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.
-            </p>
+            <p>This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.</p>
+
             <h1>Provide the Redux Store to React</h1>
             <p>
                 Once the store is created, we can make it available to our React components by putting a React-Redux   Provide  around our application in src/index.js. Import the Redux store we just created, put a   Provider  around your   App , and pass the store as a prop:
@@ -43,8 +41,6 @@ export const ReduxToolkit = () => {
                     language="javascript"
                 ></CodeComponent>
             </div>
-
-
 
             <h1>Create a Redux State Slice</h1>
             <p>
@@ -64,8 +60,6 @@ export const ReduxToolkit = () => {
                 ></CodeComponent>
             </div>
 
-
-
             <h1>Add Slice Reducers to the Store</h1>
             <p>
                 Next, we need to import the reducer function from the counter slice and add it to our store. By defining a field inside the reducer parameter, we tell the store to use this slice reducer function to handle all updates to that state.
@@ -81,7 +75,6 @@ export const ReduxToolkit = () => {
                 ></CodeComponent>
             </div>
 
-
             <h1>Use Redux State and Actions in React Components</h1>
             <p>
                 Now we can use the React-Redux hooks to let React components interact with the Redux store. We can read data from the store with useSelector, and dispatch actions using useDispatch. Create a src/features/counter/Counter.js file with a  Counter  component inside, then import that component into App.js and render it inside of  App .
@@ -96,7 +89,6 @@ export const ReduxToolkit = () => {
                     language="javascript"
                 ></CodeComponent>
             </div>
-
 
             <p>Now, any time you click the "Increment" and "Decrement" buttons:
                 <ul>

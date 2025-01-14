@@ -5,20 +5,13 @@
 .About-Row-1 {
   width: 100%;
   margin: 0 auto;
-  margin-top: 10%;
   align-items: center;
   display: inline-flex;
+  text-align: left;
 }
 .About-COL-1 {
-  width: 50%;
-  margin: 0 auto;
-}
-.About-COL-2 {
-  width: 30%;
-  margin: 0 auto;
-}
-.TalkingPic {
   width: 90%;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 600px) {
   .About-Row-1 {
@@ -29,11 +22,5 @@
   }
   .About-COL-1 {
     width: 90%;
-  }
-  .About-COL-2 {
-    width: 90%;
-  }
-  .TalkingPic {
-    margin-bottom: 10px;
   }
 }

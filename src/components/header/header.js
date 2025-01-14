@@ -1,12 +1,9 @@
 import "./header.css"
 import NavigationItem from "./navigationItem/navigationItem";
-import HomeIcon from '@mui/icons-material/Home';
 import LockPersonSharpIcon from '@mui/icons-material/LockPersonSharp';
-import { RootState } from '../store/store.ts'
 import { useSelector, useDispatch } from 'react-redux'
-import { userLogin, userLogOut } from '../store/reducers/authSlice'
+import { userLogOut } from '../store/reducers/authSlice'
 import LockOpenSharpIcon from '@mui/icons-material/LockOpenSharp';
-import { loginUser } from "../store/actions/actions.ts";
 import { persistor } from '../store/store.ts'
 
 const Header = () => {
@@ -33,9 +30,9 @@ const Header = () => {
   let menu = (
     <ul>
       <NavigationItem link="/" close={closeNav} exact>
-        <HomeIcon color="primary" />
+        Home
       </NavigationItem>
-      <NavigationItem link="/aboutme" close={closeNav}>About me</NavigationItem>
+      <NavigationItem link="/aboutme" close={closeNav}>About Us</NavigationItem>
       <NavigationItem link="/contact" close={closeNav}>Contact</NavigationItem>
       {isAuthenticated ? <NavigationItem link="/admin" close={closeNav}>Admin</NavigationItem> : ""}
     </ul>
