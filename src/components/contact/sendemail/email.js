@@ -4,9 +4,9 @@ import emailjs from 'emailjs-com';
 //https://dashboard.emailjs.com/admin/account/general
 const Email = () => {
     const form = useRef();
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_els9jek', 'template_1zg8y2c', form.current, 'Ns_K5zKD9nCcN7cA3')
+        await emailjs.sendForm('service_els9jek', 'template_1zg8y2c', form.current, 'Ns_K5zKD9nCcN7cA3')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
