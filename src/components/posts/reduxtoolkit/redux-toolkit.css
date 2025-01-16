@@ -12,3 +12,14 @@
   font-family: "Fira Code", monospace;
   text-align: left;
 }
+.ReduxToolkit-card {
+  box-shadow: 0ch;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: #f2f4f4;
+  box-sizing: border-box;
+  border: 0.2px solid #cfd1d6;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(218, 214, 214, 0.2);
+}

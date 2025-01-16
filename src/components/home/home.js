@@ -12,7 +12,7 @@ const Home = () => {
               Online Resume
             </div>
             <div className="card-container">
-              <h4> <a href="https://mycv.pics/" className="linkCss" rel="noreferrer" target="_blank"> View online cv</a> </h4>
+              <h4> <a href="https://mycv.pics/" className="linkCss" title="click to view online cv" rel="noreferrer" target="_blank"> View online cv</a> </h4>
               <p>Are you looking to establish a strong online presence? Look no further! Our expert team specializes in creating stunning, user-friendly cv tailored to your unique needs. Whether you're an individual looking to showcase your portfolio, we have the perfect solution for you.</p>
             </div>
           </div>
@@ -23,7 +23,7 @@ const Home = () => {
               Reduxt Toolkit
             </div>
             <div className="card-container">
-              <h4>  <NavLink className="linkCss"
+              <h4>  <NavLink className="linkCss" title="click to view redux toolkit"
                 to="redux-toolkit"
               >
                 Redux Toolkit

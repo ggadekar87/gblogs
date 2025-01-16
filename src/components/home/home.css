@@ -15,14 +15,16 @@
 }
 
 .container > div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+  border: 0.2px solid #cfd1d6;
   font-size: 30px;
   text-align: center;
 }
 
 .card {
-  box-shadow: 4px 5px 3px lightblue;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   transition: 0.3s;
   width: 100%;
   border-radius: 5px;
@@ -43,8 +45,8 @@
   text-align: left;
   line-height: 1.5;
 }
-.card-container > h2 > a {
-  font-size: 24px;
+.card-container > h4 > a {
+  font-size: 20px;
   text-align: left;
 }
 .card-container {
@@ -53,9 +55,9 @@
 
 .DivUpperBorder {
   letter-spacing: 0.7px;
-
   height: 30px;
-  background: linear-gradient(to bottom, #aadef0 0%, #f5b5d5 100%);
+  /*background: linear-gradient(to bottom, #aadef0 0%, #f5b5d5 100%);*/
+  background-color: #e3e5e9;
   text-align: left;
   font-size: 18px;
   padding: 5px;
@@ -81,6 +83,8 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(206, 233, 206);
 }
 
 .linkCss:hover,

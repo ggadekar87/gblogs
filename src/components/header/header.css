@@ -4,16 +4,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #edf3f4;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  z-index: 90;
   box-shadow: 0 2px 0 rgba(12, 13, 14, 0.15);
-  z-index: 5050;
+  z-index: 1;
   border-top: 1px solid #59595a;
+  background-color: white;
 }
 .overlay {
   height: 100%;
@@ -71,6 +70,7 @@
 }
 @media screen and (max-width: 600px) {
   .overlay-content {
+    color: white;
     top: 10%;
   }
   .overlay a {

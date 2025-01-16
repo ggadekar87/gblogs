@@ -89,14 +89,15 @@ export const ReduxToolkit = () => {
                     language="javascript"
                 ></CodeComponent>
             </div>
+            <div className="ReduxToolkit-card">
 
-            <p>Now, any time you click the "Increment" and "Decrement" buttons:
-                <ul>
-                    <li>The corresponding Redux action will be dispatched to the store</li>
-                    <li>The counter slice reducer will see the actions and update its state</li>
-                    <li>The  Counter  component will see the new state value from the store and re-render itself with the new data</li>
-                </ul>
-            </p>
+                <p>Now, any time you click the "Increment" and "Decrement" buttons:
+                    <ul>
+                        <li>The corresponding Redux action will be dispatched to the store</li>
+                        <li>The counter slice reducer will see the actions and update its state</li>
+                        <li>The  Counter  component will see the new state value from the store and re-render itself with the new data</li>
+                    </ul>
+                </p></div>
         </div>
     </div>
 }
