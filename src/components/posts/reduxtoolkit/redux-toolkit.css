@@ -7,6 +7,8 @@
 .ReduxToolkit-content {
   width: 80%;
   margin: 0 auto;
+  background-color: white;
+  padding: 20px;
 }
 .demo {
   font-family: "Fira Code", monospace;
@@ -15,11 +17,37 @@
 .ReduxToolkit-card {
   box-shadow: 0ch;
   margin-top: 5px;
-  padding-bottom: 10px;
   padding-left: 10px;
   background-color: #f2f4f4;
   box-sizing: border-box;
   border: 0.2px solid #cfd1d6;
   border-radius: 20px;
   box-shadow: 0 8px 16px 0 rgba(218, 214, 214, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.UlCss > li {
+  margin-bottom: 0.65rem;
+}
+.ReduxToolkit > .ReduxToolkit-content > h1 {
+  font-family: Optimistic Display, -apple-system, ui-sans-serif, system-ui,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
+}
+.ReduxToolkit-block {
+  width: 100%;
+}
+.text-highlighter {
+  border: 0.8px solid rgba(0, 0, 0, 0.1);
+  text-decoration: var(--ifm-link-decoration);
+  background-color: #dadde1;
+  padding: 1px 6px 2px 6px;
+  border-radius: 6px;
+}
+.text-highlighter-inner {
+  border: 0.8px solid rgba(0, 0, 0, 0.1);
+  background-color: #dadde1;
+  border-radius: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
 }

@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="container">
+
         <div>
           <div className="card">
             {/* <img src={CVImage} alt="Avatar" className="card-img" /> */}
@@ -12,7 +13,7 @@ const Home = () => {
               Online Resume
             </div>
             <div className="card-container">
-              <h4> <a href="https://mycv.pics/" className="linkCss" title="click to view online cv" rel="noreferrer" target="_blank"> View online cv</a> </h4>
+              <h4> <a href="https://mycv.pics/" className="linkCss" title="click to view online cv" rel="noreferrer" target="_blank"> View Demo CV</a> </h4>
               <p>Are you looking to establish a strong online presence? Look no further! Our expert team specializes in creating stunning, user-friendly cv tailored to your unique needs. Whether you're an individual looking to showcase your portfolio, we have the perfect solution for you.</p>
             </div>
           </div>
@@ -29,11 +30,10 @@ const Home = () => {
                 Redux Toolkit
               </NavLink> </h4>
               <p>
-                Redux toolkit is used to manage redux store operation.
+                The <strong>Redux Toolkit</strong> package is intended to be the standard way to write Redux logic.
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </div>

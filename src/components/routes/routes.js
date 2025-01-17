@@ -6,9 +6,9 @@ import { ReduxToolkit } from "../posts/reduxtoolkit/redux-toolkit";
 export const RoutesComponent = () => {
     return <Routes>
         <Route index element={<Home />} />
-        <Route path="ggadekar" element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="aboutme" element={<About />} />.
-        <Route path="redux-toolkit" element={<ReduxToolkit />} />
+        <Route path="/ggadekar" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/aboutme" element={<About />} />.
+        <Route path="/redux-toolkit" element={<ReduxToolkit />} />
     </Routes>
 }
