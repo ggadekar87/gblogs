@@ -4,6 +4,7 @@ import { Codeblockcontainer } from '../../ui/codeblockcontainer/codeblockcontain
 import { CodeComponent } from '../../ui/codecomponent/codecomponent'
 import { code } from './codeblocks'
 import { ALink } from '../../ui/link/link'
+import { Auther } from '../../ui/auther/auther'
 export const ReduxToolkit = () => {
     return <div className='ReduxToolkit'>
         {/* <div>
@@ -180,6 +181,10 @@ export const ReduxToolkit = () => {
                     <li>The counter slice reducer will see the actions and update its state</li>
                     <li>The  Counter  component will see the new state value from the store and re-render itself with the new data</li>
                 </ul>
+            </div>
+
+            <div className="AutherDiv">
+                 <Auther name="Ganesh Gadekar" email="ggadekar87@gmail.com" linkedin="https://www.linkedin.com/in/ganesh-gadekar-a1132135/"></Auther>
             </div>
         </div>
     </div>
