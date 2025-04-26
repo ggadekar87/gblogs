@@ -21,7 +21,7 @@ const Home = () => {
     to: "redux-toolkit"
   }
   let card3 = {
-    name: "Javascript Latest Features",
+    name: "Javascript",
     data: `<p>Latest features added in javascript till 2024</p>`,
     link: "",
     isNavLink: true,
@@ -31,7 +31,7 @@ const Home = () => {
   }
 
   let card4 = {
-    name:"ReactJs Version Features",
+    name:"ReactJs",
     data:`<strong>ReactJs Version Features</strong> : React version history and added new features <p> It coverse react v15, v16, v17, v18, v19</p>`,
     link:"",
     isNavLink:true,
