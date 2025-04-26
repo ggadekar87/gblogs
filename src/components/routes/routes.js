@@ -4,6 +4,7 @@ import Contact from "../contact/contact"
 import About from "../about/about";
 import { ReduxToolkit } from "../posts/reduxtoolkit/redux-toolkit";
 import { JavascriptLatestFeatures } from "../posts/javascript/LatestFeatures/javascript-latest-features";
+import { ReactVersionFeatures } from "../posts/reactversionfeatures/reactversionfeatures";
 export const RoutesComponent = () => {
     return <Routes>
         <Route index element={<Home />} />
@@ -12,5 +13,6 @@ export const RoutesComponent = () => {
         <Route path="/aboutme" element={<About />} />.
         <Route path="/redux-toolkit" element={<ReduxToolkit />} />
         <Route path="/javascript-latest-features" element={<JavascriptLatestFeatures />} />
+        <Route path="/react-version-features" element={<ReactVersionFeatures />} />
     </Routes>
 }

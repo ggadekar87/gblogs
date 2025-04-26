@@ -1,6 +1,8 @@
 import "./home.css";
 import { data, NavLink } from "react-router";
 import Card from "../ui/card/card";
+// import { useGeolocated } from "react-geolocated";
+
 const Home = () => {
   let card1 = {
     name: "Online Resume",
@@ -27,6 +29,26 @@ const Home = () => {
     linkName: "Javascript Latest Features",
     to: "javascript-latest-features"
   }
+
+  let card4 = {
+    name:"ReactJs Version Features",
+    data:`<strong>ReactJs Version Features</strong> : React version history and added new features <p> It coverse react v15, v16, v17, v18, v19</p>`,
+    link:"",
+    isNavLink:true,
+    linkTitle:"click to view ReactJs Version Features",
+    linkName:"ReactJs Version Features",
+    to:"react-version-features"
+  }
+
+  // const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+  // useGeolocated({
+  //     positionOptions: {
+  //         enableHighAccuracy: false,
+  //     },
+  //     userDecisionTimeout: 5000,
+  // });
+
+
   return (
     <div className="Home">
       <div className="container">
@@ -39,6 +61,44 @@ const Home = () => {
         <div>
           <Card {...card3}></Card>
         </div>
+        <div>
+        <Card {...card4}></Card>
+        </div>
+
+{/* {!isGeolocationAvailable ? (
+        <div>Your browser does not support Geolocation</div>
+    ) : !isGeolocationEnabled ? (
+        <div>Geolocation is not enabled</div>
+    ) : coords ? (
+        <table>
+            <tbody>
+                <tr>
+                    <td>latitude</td>
+                    <td>{coords.latitude}</td>
+                </tr>
+                <tr>
+                    <td>longitude</td>
+                    <td>{coords.longitude}</td>
+                </tr>
+                <tr>
+                    <td>altitude</td>
+                    <td>{coords.altitude}</td>
+                </tr>
+                <tr>
+                    <td>heading</td>
+                    <td>{coords. heading}</td>
+                </tr>
+                <tr>
+                    <td>speed</td>
+                    <td>{coords.speed}</td>
+                </tr>
+            </tbody>
+        </table>
+    ) : (
+        <div>Getting the location data&hellip; </div>
+    )
+  } */}
+
       </div>
     </div>
   );

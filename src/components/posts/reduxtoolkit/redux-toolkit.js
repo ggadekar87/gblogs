@@ -1,12 +1,13 @@
 
 import './redux-toolkit.css'
+import "../common/common.css"
 import { Codeblockcontainer } from '../../ui/codeblockcontainer/codeblockcontainer'
 import { CodeComponent } from '../../ui/codecomponent/codecomponent'
-import { code } from './codeblocks'
+import { code } from '../common/codeblocks'
 import { ALink } from '../../ui/link/link'
 import { Auther } from '../../ui/auther/auther'
 export const ReduxToolkit = () => {
-    return <div className='ReduxToolkit'>
+    return <div className='post'>
         {/* <div>
             <ul>
                 <li><a href="#Introduction">Introduction</a></li>
@@ -20,12 +21,12 @@ export const ReduxToolkit = () => {
                 <li><a href="#Use Redux State and Actions">Use Redux State and Actions</a></li>
             </ul>
         </div> */}
-        <div className='ReduxToolkit-content'>
+        <div className='post-content'>
             {/* <a name="Introduction"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Introduction</h1>
                 <p>
-                    <div className="ReduxToolkit-card">
+                    <div className="post-card">
                         <h4><strong>It was originally created to help address three common concerns about Redux:</strong></h4>
                         <ul className='UlCss'>
                             <li>Configuring a Redux store is too complicated</li>
@@ -37,7 +38,7 @@ export const ReduxToolkit = () => {
                 </p>
             </div>
             {/* <a name="What's Included"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>What's Included</h1>
                 <p>
                     Redux Toolkit includes these APIs:
@@ -78,7 +79,7 @@ export const ReduxToolkit = () => {
                 </p>
             </div>
             {/* <a name="Install Redux Toolkit and React-Redux"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Install Redux Toolkit and React-Redux</h1>
                 <p>Add the <a href='https://www.npmjs.com/package/@reduxjs/toolkit' rel="noreferrer" target="_blank"> Redux Toolkit</a> and <a href='https://www.npmjs.com/package/react-redux' rel="noreferrer" target="_blank"> React-Redux </a> packages to your project:</p>
                 <Codeblockcontainer >
@@ -86,7 +87,7 @@ export const ReduxToolkit = () => {
                 </Codeblockcontainer>
             </div>
             {/* <a name="Create a Redux Store"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Create a Redux Store</h1>
                 <p>
                     Create a file named <span className='text-highlighter-inner'>src/app/store.js</span>. Import the configureStore API from Redux Toolkit. We'll start by creating an empty Redux store, and exporting it:
@@ -104,7 +105,7 @@ export const ReduxToolkit = () => {
                 <p>This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.</p>
             </div>
             {/* <a name="Provide the Redux Store to React"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
 
                 <h1>Provide the Redux Store to React</h1>
                 <p>
@@ -122,7 +123,7 @@ export const ReduxToolkit = () => {
                 </div>
             </div>
             {/* <a name="Create a Redux State Slice"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Create a Redux State Slice</h1>
                 <p>
                     Add a new file named <span className='text-highlighter-inner'>src/features/counter/counterSlice.js</span>. In that file, import the createSlice API from Redux Toolkit.
@@ -140,7 +141,7 @@ export const ReduxToolkit = () => {
                 </div>
             </div>
             {/* <a name="Add Slice Reducers to the Store"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Add Slice Reducers to the Store</h1>
                 <p>
                     Next, we need to import the reducer function from the counter slice and add it to our store. By defining a field inside the reducer parameter, we tell the store to use this slice reducer function to handle all updates to that state.
@@ -157,7 +158,7 @@ export const ReduxToolkit = () => {
                 </div>
             </div>
             {/* <a name="Use Redux State and Actions in React Components"></a> */}
-            <div className='ReduxToolkit-block'>
+            <div className='post-block'>
                 <h1>Use Redux State and Actions in React Components</h1>
                 <p>
                     Now we can use the <ALink href='https://www.npmjs.com/package/react-redux' rel="noreferrer" target="_blank">React-Redux</ALink> hooks to let React components interact with the Redux store. We can read data from the store with useSelector, and dispatch actions using useDispatch. Create a <span className='text-highlighter-inner'>src/features/counter/Counter.js</span> file with a  Counter  component inside, then import that component into <span className='text-highlighter-inner'>App.js</span> and render it inside of  App .
@@ -174,7 +175,7 @@ export const ReduxToolkit = () => {
                 </div>
             </div>
             {/* <a name="Use Redux State and Actions"></a> */}
-            <div name="Use Redux State and Actions" className="ReduxToolkit-card">
+            <div name="Use Redux State and Actions" className="post-card">
                 <h4><strong> Now, any time you click the "Increment" and "Decrement" buttons:</strong></h4>
                 <ul className='UlCss'>
                     <li>The corresponding Redux action will be dispatched to the store</li>
