@@ -5,8 +5,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { userLogOut } from '../store/reducers/authSlice'
 import LockOpenSharpIcon from '@mui/icons-material/LockOpenSharp';
 import { persistor } from '../store/store.ts'
-
-const Header = () => {
+import { useNavigate } from "react-router";
+import Logout from "../account/signup/logout.js";
+const Header = (props) => {
+  const navigate = useNavigate();
 
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
   const dispatch = useDispatch()
@@ -20,12 +22,15 @@ const Header = () => {
   }
 
   const handleLogin = () => {
+    navigate('/signup');
   }
   const handleLogOut = () => {
     dispatch(userLogOut());
     persistor.purge().then(() => {
       console.log('Persisted state has been cleared.');
     });
+    navigate('/logout');
+
   }
   let menu = (
     <ul>

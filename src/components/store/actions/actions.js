@@ -1,9 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "./axios-setup.js";
 //New Actions
-export const loginUser: any = createAsyncThunk(
+export const loginUser = createAsyncThunk(
   "loginUser",
-  async (data: any) => {
+  async (data) => {
     try {
       //   const response = await axios.post("/login", {
       //     username: data.username,
@@ -29,9 +29,9 @@ export const loginUser: any = createAsyncThunk(
   }
 );
 
-export const saveSignUp: any = createAsyncThunk(
+export const saveSignUp = createAsyncThunk(
   "saveSignUp",
-  async (data: any) => {
+  async (data) => {
     const response = await axios.post("/signup", {
       username: data.email,
       password: data.password,

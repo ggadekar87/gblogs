@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import {
     loginUser,
     saveSignUp,
-} from "../actions/actions.ts";
+} from "../actions/actions";
 const initialState = {
     isAuthenticated: false,
     userRole: "",
