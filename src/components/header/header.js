@@ -9,8 +9,10 @@ import { useNavigate } from "react-router";
 import Logout from "../account/signup/logout.js";
 const Header = (props) => {
   const navigate = useNavigate();
+  const given_name = useSelector((state) => state.auth.given_name)
 
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
+  const userRole = useSelector((state) => state.auth.userRole)
   const dispatch = useDispatch()
 
   const openNav = () => {
@@ -39,7 +41,7 @@ const Header = (props) => {
       </NavigationItem>
       <NavigationItem link="/aboutme" close={closeNav}>About Us</NavigationItem>
       <NavigationItem link="/contact" close={closeNav}>Contact</NavigationItem>
-      {isAuthenticated ? <NavigationItem link="/admin" close={closeNav}>Admin</NavigationItem> : ""}
+      {isAuthenticated && userRole == 'Admin' ? <NavigationItem link="/admin" close={closeNav}>Admin</NavigationItem> : ""}
     </ul>
   );
 
@@ -47,7 +49,7 @@ const Header = (props) => {
     <header className="Toolbar">
       {!isAuthenticated ?
         <LockPersonSharpIcon onClick={handleLogin} titleAccess="login" className="Login"></LockPersonSharpIcon>
-        : <LockOpenSharpIcon onClick={handleLogOut} titleAccess="logout" className="Login"></LockOpenSharpIcon>
+        : <div className="Login">Hi {given_name} <LockOpenSharpIcon onClick={handleLogOut} titleAccess="logout" ></LockOpenSharpIcon></div>
       }
       <span className="MobileMenu" onClick={openNav}>&#9776;</span>
       <div id="myNav" className="overlay">

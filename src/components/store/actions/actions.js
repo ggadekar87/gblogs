@@ -16,8 +16,10 @@ export const loginUser = createAsyncThunk(
         Data: {
           User: {
             _id: 11,
-            email: "aa@gmail.com",
-            userRole: "admin",
+            email: data.email,
+            userRole: data.userRole,
+            "fullName": data.fullName,
+            "given_name": data.given_name,
             token: "asasas",
           },
         },

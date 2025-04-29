@@ -11,7 +11,9 @@ const initialState = {
     status: "",
     user: {},
     userId: "",
-    token: ""
+    token: "",
+    "fullName": "",
+    "given_name": "",
 }
 
 const authSlice = createSlice({
@@ -38,11 +40,17 @@ const authSlice = createSlice({
                 state.status = "succeeded";
                 if (action.payload.Success) {
                     state.error = "";
+                    console.log("----------------------------")
+
+                    console.log(action.payload)
                     state.user = action.payload.Data.User;
                     state.userId = action.payload.Data.User._id;
                     state.token = action.payload.Data.token;
                     state.userRole = action.payload.Data.userRole;
                     state.isAuthenticated = action.payload.isAuthenticated;
+                    state.fullName = action.payload.Data.User.fullName;
+                    state.given_name = action.payload.Data.User.given_name;
+
                     localStorage.setItem("token", action.payload.Data.token);
                     localStorage.setItem("expirationDate", "");
                     localStorage.setItem("userId", action.payload.Data.User.email);

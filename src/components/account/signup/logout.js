@@ -22,10 +22,12 @@ function Logout() {
         <GoogleOAuthProvider clientId={clientId}>
             <div className="App">
                 <div>
-                    <googleLogout
+                    <button onClick={handleLogoutSuccess}>Logout</button>
+
+                    {/* <googleLogout
                         onLogoutSuccess={handleLogoutSuccess}
                         buttonText="Logout"
-                    />
+                    /> */}
                 </div>
             </div>
         </GoogleOAuthProvider>

@@ -5,16 +5,16 @@ import axios from "axios";
 import { useEffect } from "react";
 function App() {
   useEffect(() => {
-    //   const path = 'https://gtechblog.com/gblogsapi/visit';
-    //   axios.get(path).then(
-    //     (response) => {
-    //         var result = response.data;
-    //         console.log(result);
-    //     },
-    //     (error) => {
-    //         console.log(error);
-    //     }
-    // );
+    const path = 'https://gtechblog.com/gblogsapi/visit';
+    axios.get(path).then(
+      (response) => {
+        var result = response.data;
+        console.log(result);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }, []);
   let routes = (
     <RoutesComponent />
