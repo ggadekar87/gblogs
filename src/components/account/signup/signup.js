@@ -18,7 +18,7 @@ function SignUp() {
     const handleLoginSuccess = (response) => {
         console.log('Login Success:', response);
         dispatch(loginUser(response));
-        navigate("/");
+        navigate(-1); // Navigate back to the previous page
         // You can now use the response to authenticate your user in your backend
     };
 

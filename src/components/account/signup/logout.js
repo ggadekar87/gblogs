@@ -13,6 +13,7 @@ function Logout() {
     const handleLogoutSuccess = () => {
         googleLogout();
         dispatch(userLogOut());
+        navigate(-1); // Navigate back to the previous page
     };
     useEffect(() => {
         navigate(-1)
