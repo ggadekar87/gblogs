@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.comment-list {
+  margin-top: 20px;
+}
+
+.comment {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment p {
+  margin: 0 0 10px;
+}
+
+.comment div {
+  display: flex;
+  gap: 10px;
+}
+
+.comment button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment button:hover {
+  background-color: #0056b3;
+}
+
+.comment input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.comment input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.comment input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.comment input[type="text"] + button {
+  margin-left: 10px;
+}
+
+.comment img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.comment .reply {
+  margin-left: 20px;
+}

@@ -50,3 +50,14 @@ export const saveSignUp = createAsyncThunk(
     return response.data;
   }
 );
+
+export const addComment = createAsyncThunk(
+  "addComment",
+  async (data) => {
+    // const response = await axios.post("/signup", {
+    //   username: data.email,
+    //   password: data.password,
+    // });
+    return data;
+  }
+);
