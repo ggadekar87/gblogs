@@ -1,0 +1,153 @@
+.Home {
+  width: 100%;
+  margin: 0 auto;
+}
+.Heading2 {
+  font-weight: bold;
+  float: left;
+  margin-left: 2%;
+}
+.data {
+  float: left;
+  text-align: justify;
+  font-size: 13px;
+  text-wrap: wrap;
+}
+.data > ul > li {
+  margin: 0 auto;
+  list-style: symbols(red);
+}
+.CompanyName {
+  float: left;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: justify;
+  font-size: 13px;
+}
+.DateRange {
+  margin-right: 3%;
+  float: right;
+  font-size: 13px;
+}
+.ProfilePic {
+  width: 90%;
+  height: 120px;
+  cursor: pointer;
+  border-top: 30px;
+  border-color: #0e6655;
+}
+.styled-image:hover {
+  transform: scale(0.03);
+}
+
+.ProfilePic:hover {
+  transform: scale(1.05);
+}
+.Heading {
+  font-size: 15px;
+  font-weight: bold;
+  float: left;
+}
+.sideBarContent {
+  text-align: left;
+  padding: 5px;
+  margin-top: 3px;
+}
+.sideBarContentInner {
+  margin-left: 7%;
+  margin-top: 3%;
+}
+.sideBarContent > ul > li {
+  list-style: disc;
+}
+.tabSideBar {
+  margin: 0 auto;
+  width: 70%;
+}
+.tabSideBar > tr > td {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 13px;
+}
+.nameCss {
+  font-weight: bold;
+  font-size: 24px;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  color: #485653;
+  margin-left: 2%;
+  padding: 3px;
+  text-shadow: 1px 1px 2px rgb(12, 12, 80);
+  cursor: grab;
+}
+.nameCss:hover {
+  transform: rotateY(10deg);
+  transform: rotateX(10deg);
+}
+.horizontalBar {
+  height: 4px;
+  background-color: #0e6655;
+  margin-bottom: 3%;
+}
+.tableContent {
+  width: 100%;
+  border: 1px solid rgb(227, 224, 224);
+}
+.tableContent > tr > td {
+  width: 100%;
+}
+.column1 {
+  float: left;
+  width: 30%;
+}
+.column2 {
+  float: left;
+  width: 70%;
+  background-color: white;
+}
+.CVrow {
+  box-shadow: 4px 4px rgb(217, 240, 247);
+  width: 70%;
+  margin: 0 auto;
+  display: inline-flex;
+  text-wrap: inherit;
+  background-color: #f1f2f4ab;
+}
+/* Clear floats after the columns */
+.CVrow::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+  .ProfilePic {
+    width: 100%;
+  }
+  .ProfilePic:hover {
+    box-shadow: 15px 15px 15px rgb(117, 190, 236) inset;
+  }
+  .tabSideBar {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .CVrow {
+    width: 95%;
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ProfilePic {
+    width: unset;
+  }
+  .tabSideBar {
+    margin-left: unset;
+  }
+}

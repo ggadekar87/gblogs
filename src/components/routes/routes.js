@@ -7,6 +7,7 @@ import { JavascriptLatestFeatures } from "../posts/javascript/LatestFeatures/jav
 import { ReactVersionFeatures } from "../posts/reactversionfeatures/reactversionfeatures";
 import SignUp from "../account/signup/signup";
 import Logout from "../account/signup/logout";
+import DemoCV from "../cv/demo/demo_cv";
 export const RoutesComponent = () => {
     return <Routes>
         <Route index element={<Home />} />
@@ -19,5 +20,6 @@ export const RoutesComponent = () => {
         <Route path="/react-version-features" element={<ReactVersionFeatures />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/demo-cv" element={<DemoCV />} />
     </Routes>
 }

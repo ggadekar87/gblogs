@@ -24,7 +24,7 @@ const Header = (props) => {
   }
 
   const handleLogin = () => {
-    navigate('/signup');
+    //navigate('/signup');
   }
   const handleLogOut = () => {
     dispatch(userLogOut());
