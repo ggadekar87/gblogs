@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
-const Comment = ({ comment, onLike, onDislike, onDelete, onReply }) => {
+import profilePic from '../images/profilePic.jpg'
+const Comment = ({ comment, onLike, onDislike, onDelete, onReply, isReply, mainCommenctId }) => {
     const [reply, setReply] = useState('');
     const [showReplyBox, setShowReplyBox] = useState(false);
 
     const handleReply = () => {
-        onReply(comment.id, reply);
+        if (isReply) {
+            onReply(mainCommenctId, reply);
+
+        } else {
+            onReply(comment.id, reply);
+        }
         setReply('');
         setShowReplyBox(false);
     };
@@ -15,12 +20,18 @@ const Comment = ({ comment, onLike, onDislike, onDelete, onReply }) => {
     })
     return (
         <div className="comment">
-            <p>{comment.text}</p>
+            <div className='userDetails'>
+                <div>
+                    <img className='profilePic' src={profilePic} alt='' />
+                </div>
+                <div>{comment.name}</div>
+            </div>
+            <div> <p>{comment.text}</p></div>
             <div>
                 <button onClick={() => onLike(comment.id)}>Like ({comment.likes})</button>
                 <button onClick={() => onDislike(comment.id)}>Dislike ({comment.dislikes})</button>
                 <button onClick={() => setShowReplyBox(!showReplyBox)}>Reply</button>
-                <button onClick={() => onDelete(comment.id)}>Delete</button>
+                {comment.isDelete ? <button onClick={() => onDelete(comment.id)}>Delete</button> : ""}
             </div>
             {showReplyBox && (
                 <div>
@@ -41,6 +52,8 @@ const Comment = ({ comment, onLike, onDislike, onDelete, onReply }) => {
                     onDislike={onDislike}
                     onDelete={onDelete}
                     onReply={onReply}
+                    isReply={true}
+                    mainCommenctId={comment.id}
                 />
             ))}
         </div>

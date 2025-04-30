@@ -61,3 +61,33 @@ export const addComment = createAsyncThunk(
     return data;
   }
 );
+
+export const getComment = createAsyncThunk(
+  "getComment",
+  // async (data) => {
+  //   const response = await axios.get("/get/subMenu?mid=" + data);
+  //   return response.data;
+  // }
+  async (data) => {
+    // const response = await axios.post("/signup", {
+    //   username: data.email,
+    //   password: data.password,
+    // });
+    return data;
+  }
+);
+
+export const replyComment = createAsyncThunk(
+  "replyComment",
+  // async (data) => {
+  //   const response = await axios.get("/get/subMenu?mid=" + data);
+  //   return response.data;
+  // }
+  async (data) => {
+    // const response = await axios.post("/signup", {
+    //   username: data.email,
+    //   password: data.password,
+    // });
+    return data;
+  }
+);

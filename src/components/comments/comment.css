@@ -1,30 +1,7 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-.App {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  margin-top: 0;
-}
-
-.comment-list {
-  margin-top: 20px;
-}
-
 .comment {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .comment p {
@@ -34,22 +11,28 @@ h2 {
 .comment div {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
-.comment button {
-  background-color: #007bff;
-  color: #fff;
+.comment button,
+.comment-list button {
+  background: none !important;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 0 !important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
   cursor: pointer;
+  font-size: 9px;
 }
-
 .comment button:hover {
   background-color: #0056b3;
 }
 
-.comment input[type="text"] {
+.comment input[type="text"],
+.comment-list input[type="text"] {
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -64,15 +47,32 @@ h2 {
   border-color: #007bff;
 }
 
-.comment input[type="text"] + button {
+.comment input[type="text"] + button,
+.comment-list input[type="text"] + button {
   margin-left: 10px;
-}
-
-.comment img {
-  max-width: 50px;
-  border-radius: 50%;
 }
 
 .comment .reply {
   margin-left: 20px;
+}
+.comment .reply-box {
+  margin-top: 10px;
+}
+
+.comment-list input {
+  width: 80%;
+}
+
+.userDetails {
+  display: flex;
+  overflow: hidden;
+  padding-right: 1.6rem;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+}
+
+.profilePic {
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
 }

@@ -10,10 +10,13 @@ const initialState = {
     error: "",
     status: "",
     user: {},
-    userId: "",
+    userId: "123",
     token: "",
-    "fullName": "",
+    "fullName": "Ganesh Gadekar",
     "given_name": "",
+    imageUrl: "https://lh3.googleusercontent.com/a/ACg8ocLJ3Cxdmd3mVmtAEqR3oYIQ0yNsEB0QhjTC14GfwSkSJ795nEaq=s96-c",
+    email: "ggade@gmail.com",
+
 }
 
 const authSlice = createSlice({

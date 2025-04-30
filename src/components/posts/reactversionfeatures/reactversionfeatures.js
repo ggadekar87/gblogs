@@ -7,12 +7,8 @@ import { code } from '../common/codeblocks'
 import { ALink } from '../../ui/link/link'
 import { Auther } from '../../ui/auther/auther'
 import CommentList from "../../comments/commentList";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { loginUser } from '../../store/actions/actions';
+
 export const ReactVersionFeatures = () => {
-    const comments = useSelector((state) => state.main.comments)
-    const dispatch = useDispatch();
     return <div className='post'>
         <div>
             <ul>
@@ -125,7 +121,7 @@ export const ReactVersionFeatures = () => {
                 </div>
             </div>
             <div className='post-block'>
-                <CommentList comments={comments}></CommentList>
+                <CommentList blogId="1"></CommentList>
             </div>
             <div className="AutherDiv">
                 <Auther name="Ganesh Gadekar" email="ggadekar87@gmail.com" linkedin="https://www.linkedin.com/in/ganesh-gadekar-a1132135/"></Auther>
