@@ -1,10 +1,13 @@
 .Email {
   width: 100%;
+  border-left: 1px solid #5f625f;
 }
 .email-form {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
+  box-shadow: #5f625f;
+  text-align: left;
 }
 
 .form-group {
