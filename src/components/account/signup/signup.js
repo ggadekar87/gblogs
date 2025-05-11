@@ -10,6 +10,7 @@ function SignUp() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
+    const error = useSelector((state) => state.auth.error)
 
     const handleGoogleSignUp = async () => {
         try {
@@ -29,9 +30,13 @@ function SignUp() {
             picture: userObject.picture,
             userRole: "User"
         }
-        console.log('Login Success loginRequest:', loginRequest);
+        console.log('Login Success loginRequest:', userObject);
         dispatch(loginUser(loginRequest));
-        navigate(-1);
+        if( error != "")
+        { alert(error);}
+        else{
+                navigate(-1);
+        }
     }
 
 

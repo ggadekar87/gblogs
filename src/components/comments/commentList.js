@@ -100,7 +100,7 @@ const CommentList = (props) => {
     return (
         <div className="comment-list">
             <h2>Comments</h2>
-            {isAuthenticated ?
+            {isAuthenticated && false ?
                 <React.Fragment>
                     <div>
                         <input

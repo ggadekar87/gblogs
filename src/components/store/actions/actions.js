@@ -5,26 +5,49 @@ export const loginUser = createAsyncThunk(
   "loginUser",
   async (data) => {
     try {
-      //   const response = await axios.post("/login", {
-      //     username: data.username,
-      //     password: data.password,
-      //   });
-      //   response.data.isAuthenticated = true;
-      //   return response.data;
-      return {
-        Success: true,
-        Data: {
-          User: {
-            _id: 11,
-            email: data.email,
-            userRole: data.userRole,
-            "fullName": data.fullName,
-            "given_name": data.given_name,
-            token: "asasas",
-          },
+      const path = 'https://gtechblog.com/gblogsapi/signup';
+      var respose = {
+          Success: false,
+              Data: {
+              },
+              isAuthenticated: false,
+      }
+      await axios.post(path, data, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+          'Access-Control-Allow-Origin': '*',
+        }
+      }).then(
+        (response) => {
+          var result = response.data;
+          console.log("Api call doen" + result.message);
+          console.log(result);
+          if (result.message == 'Email already registered' || result.message == 'User registered successfully') {
+            respose = {
+              Success: true,
+              Data: {
+                User: {
+                  _id: data.email,
+                  email: data.email,
+                  userRole: data.userRole,
+                  "fullName": data.fullName,
+                  "given_name": data.given_name,
+                  token: "asasas",
+                },
+              },
+              isAuthenticated: true,
+            };
+          } 
         },
-        isAuthenticated: true,
-      };
+        (error) => {
+          console.log("Api call doen errrrrrrrrrr");
+
+          console.log(error);
+        }
+      );
+      return respose;
+
     } catch (err) {
       return { Success: false, Error: "Api falied" };
     }
