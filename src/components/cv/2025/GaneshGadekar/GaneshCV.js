@@ -33,7 +33,10 @@ const GaneshCV = () => {
                                 <div className="sideBarContent">
                                     <ul>
                                         <li>
-                                            +971 667665656
+                                            +971 561580253
+                                        </li>
+                                        <li>
+                                            +971 7709558425
                                         </li>
                                     </ul>
                                 </div>
